@@ -1,0 +1,9 @@
+/* TEAM */
+   One man army: Raman Shalupau (aka Ksaitor)
+   https://www.linkedin.com/in/ramanshalupau
+   raman.shalupau@gmail.com
+
+                 
+/* SITE */
+   Name: UserTrakr
+   Description: Tracking user's focus

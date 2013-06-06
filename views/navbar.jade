@@ -1,0 +1,63 @@
+- var user = user || ""
+- var sites =  sites || "" 
+.navbar.navbar-fixed-top
+   .navbar-inner
+     .container
+       a.btn.btn-navbar(data-toggle='collapse', data-target='.nav-collapse')
+         span.icon-bar
+         span.icon-bar
+         span.icon-bar
+       a.brand(href='/') FocusTrakr 
+       .nav-collapse
+         ul.nav
+           li.divider-vertical
+           li
+             a(href="/sites")
+                i.icon-home.icon-white
+                |  Sites
+           //
+              li.dropdown
+                a.dropdown-toggle(href='#', data-toggle='dropdown')
+                  | thekingoflimbs.com
+                  b.caret
+                ul.dropdown-menu
+                  li
+                    a(href='#') ksaitor.com
+                  li
+                    a(href='#') radiohead.com
+                  li
+                    a(href='#') thoth-journal.org
+                  li.divider
+                  li
+                    a(href='#addSiteModal', data-toggle='modal')
+                      i.icon-plus
+                      | Add
+           li
+             a(href='javascript:window.history.back()') Back
+         ul.nav.pull-right
+           li.divider-vertical
+            - if(session.user)
+                 li.dropdown
+                   a.dropdown-toggle(href='#', data-toggle='dropdown')
+                     =user.email + " "
+                     b.caret
+                   ul.dropdown-menu
+                     li.hide
+                       a(href='#')
+                         i.icon-shopping-cart
+                         |  Purchase
+                     li
+                       a(href='#')
+                         i.icon-edit
+                         |  Preferences
+                     li
+                       a(href='#')
+                         i.icon-info-sign
+                         |  About FocusTrakr
+                     li.divider
+                     li
+                       a(href="/logout") Log out
+            - else
+               li
+                 a(href='/login') Log in
+       //.nav-collapse 

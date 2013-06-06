@@ -1,0 +1,37 @@
+include ../navbar
+.container
+   div.center
+      h1 Sign in or create a new account
+      br
+      div(style="width:270px;")
+         form(action='/login', method='POST').offset02
+            table(style="text-align: left;").table-condensed
+               tr
+                  th
+                     input(type='radio', name='action', value='signin', id='signin', checked)
+                     label(for='signin', style="display: inline; padding-left:6px;") Sign in 
+                  th(style="padding-left:10px;")
+                     input(type='radio', name='action', value='register', id='register')
+                     label(for='register', style="display: inline; padding-left:6px;") Create a new account
+            br
+            p
+               label(for='login') Email:
+               input(type='text', name='login', id='login')
+            p
+               label(for='password') Password:
+               input(type='password', name='password', id='password')
+            p
+               input(type='submit', value="Submit").btn.btn-primary
+            input(type='hidden', name='redir', value=redir  )
+            p
+               - if(flash.warn)
+                  .row
+                   p.alert.alert-error.span2
+                     | Incorrect password or login
+               a(href='#') Forgot your password?
+   br
+br
+br
+.container   
+   include ../footer
+include ../ga

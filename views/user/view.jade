@@ -1,0 +1,66 @@
+include ../navbar
+.container
+      .row
+        #toobar-pane.span2
+          ul#toolbar.woll.nav.nav-list
+            li.nav-header My Tools
+            //
+               li
+                 a(href='#') Filter
+               li
+                 a(href='#') Prefferences
+            br
+            .btn-group
+              a.btn(href='#zoom-out', title='Zoom out')
+                i.icon-zoom-out
+              a.btn(href='#zoom-reset', title='Reset zoom')
+                i.icon-search
+              a.btn(href='#zoom-in', title='Zoom in')
+                i.icon-zoom-in
+            br
+            .btn-group
+              a.btn(href='#toggle-heatmap')
+                i.icon-fire
+                | Toggle map
+            br
+            li.nav-header Screenshot: 
+               span#screenshotCounter
+            .btn-group
+              a.btn(href='#prev_shot', title='Previous screenshot')
+                i.icon-arrow-left
+              a.btn(href='#curr_shot', title='Current screenshot')
+                i.icon-screenshot
+              a.btn(href='#next_shot', title='Next screenshot')
+                i.icon-arrow-right
+             br
+          br
+          .well.nav.nav-list
+            h6 Hits today
+            h2 219
+            h6 over the week
+            h2 1216
+            hr
+            h6 Bounce rate
+            h2 13%
+            h6 Exit rate
+            h2 1%
+            h6 Average time
+            h2 15min
+        #heatmap-container.span9
+           canvas#heatmap(width="1200",height="1000")
+          .pagination.pagination-centered.hide
+            ul
+              li
+                a(href='#') Prev
+              li.active
+                a(href='#') 1
+              li
+                a(href='#') 2
+              li
+                a(href='#') 3
+              li
+                a(href='#') 4
+              li
+                a(href='#') Next
+   include ../footer_scripts
+include ../ga

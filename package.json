@@ -1,0 +1,17 @@
+{
+  "name": "focustrakr",
+  "version": "0.0.2",
+  "description": "traking user's attention on the web",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ksaitor/focustrakr.git"
+  },
+  "author": "@ksaitor",
+  "license": "BSD",
+  "readmeFilename": "README.md",
+  "gitHead": "561d25afdafdc6927e6eb146ce56a920461dea27"
+}

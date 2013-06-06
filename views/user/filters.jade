@@ -1,0 +1,87 @@
+include ../navbar
+
+.container
+   div.row
+     .span2
+       ul.woll.nav.nav-list
+         li.nav-header My Tools
+         li
+           a(href='#') Tracking code
+         li
+           a(href='#') Filter
+         li
+           a(href='#') Edit site
+        br
+       .well.nav.nav-list
+         h6 Total hits today
+         h2 219
+         h6 over the week
+         h2 1216
+         hr
+         h6 avg time on site
+         h2 15min
+     .well.span9
+       ul.thumbnails
+         li.span3
+           #addFilterModal.modal.hide
+             .modal-header
+               a.close(data-dismiss='modal') x
+               h3 Add a new filter for your site   // shoud write sitename
+             .modal-body
+               div.control-group#Name
+                  input(type="text", name="name", placeholder="Filter name").span4
+                  span.help-inline
+                     | *
+               div.control-group#filterDescription
+                  input(type="text", name="description", placeholder="Filter description").span4
+               div.control-group#pathname
+                  input(type="text", name="pathname", placeholder="/path/to/your/page", data-provide="typeahead").span4
+                  span.help-inline
+                     | *
+               a(href="#addParam").icon-plus
+               br
+             .modal-footer
+               a.btn.btn-primary(href='#addFilter') Add
+               a.btn(href='#', data-dismiss='modal') Close
+           a.thumbnail(data-toggle='modal', href='#addFilterModal')
+             img(src='http://placehold.it/260x180/ffffff/&text=add filter', alt='')
+       .pagination.pagination-centered.hide
+            ul
+              li
+                a(href='#') Prev
+              li.active
+                a(href='#') 1
+              li
+                a(href='#') 2
+              li
+                a(href='#') 3
+              li
+                a(href='#') 4
+              li
+                a(href='#') Next
+      #editFilterModal.modal.hide
+         .modal-header
+            a.close(data-dismiss='modal') x
+            h3 Edit your filter
+         .modal-body
+            p.pull-right
+               a(href="#updateShots") Update screenshots
+            div.control-group#Name
+               input(type="text", name="name", placeholder="Filter name").span4
+               span.help-inline
+                  | *
+            div.control-group#filterDescription
+               input(type="text", name="description", placeholder="Filter description").span4
+            div.control-group#pathname
+               input.disabled(type="text", name="pathname", placeholder="/path/to/your/page", disabled).span4
+            a(href="#addParam").icon-plus
+            br
+         .modal-footer
+            a.btn(href='#', data-dismiss='modal') Close
+            a.btn.btn-primary(href="#submitFilter") Submit
+            span#loadingProgress.btn.disabled.hide
+               img(src="/img/16px_loading.gif")
+            a.btn.btn-danger(href="#deleteFilter", style="float:left;") Delete
+   include ../footer
+include ../ga
+   
