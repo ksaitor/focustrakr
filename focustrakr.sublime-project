@@ -1,0 +1,23 @@
+{
+  "folders": [
+          {
+    "path": ".",
+    "folder_exclude_patterns": [
+                     ".gitflow",
+                     ".idea",
+                     ".vagrant",
+                     "assets",
+                     "node_modules"
+                ],
+    "file_exclude_patterns": [
+                     "*.sublime-workspace*"
+                ]
+  }
+     ],
+  "settings": {
+    "tab_size": 2,
+    "translate_tabs_to_spaces": true,
+    "default_line_ending": "unix",
+    "trim_trailing_white_space_on_save": true
+  }
+}
