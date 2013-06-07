@@ -16,7 +16,8 @@
 		"crypto": "*",
 		"url": "*",
 		"png": "*",
-		"dateformat": "*"
+		"dateformat": "*",
+		"requirejs": "*"
 	},
 	"repository": {
 		"type": "git",
