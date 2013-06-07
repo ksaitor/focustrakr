@@ -9,9 +9,14 @@
 	"dependencies": {
 		"express": "*",
 		"connect-redis": "*",
+		"connect-memcached": "*",
 		"mongodb": "*",
 		"memcached": "*",
-		"cli-color": "*"
+		"cli-color": "*",
+		"crypto": "*",
+		"url": "*",
+		"png": "*",
+		"dateformat": "*"
 	},
 	"repository": {
 		"type": "git",
